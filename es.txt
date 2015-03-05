@@ -1,0 +1,87 @@
+for (i=0;i<10;i++) {
+	str='';
+	for (j=1;j<11;j++) {
+		x=i*10+j;
+		str+=x+'\t'
+	}
+	console.log(str);
+}
+
+for (i=0;i<10;i++) {
+	str='';
+	for (j=1;j<11;j++) {
+		x=i*10+j;
+		str+=x+',\t'
+	}
+	console.log(str);
+}
+
+for (i=1;i<11;i++) {
+	str='';
+	for (j=1;j<11;j++) {
+		if(i===j)
+			x=1;
+		else
+			x=0;
+		str+=x+',\t'
+	}
+	console.log(str);	
+}
+
+for (i=1;i<11;i++) {
+	str='';
+	for (j=1;j<11;j++) {
+		if(i===10-j+1)
+			x=1;
+		else
+			x=0;
+		str+=x+',\t'
+	}
+	console.log(str);	
+}
+
+// x
+for (i=1;i<11;i++) {
+	str='';
+	for (j=1;j<11;j++) {
+		if(i===j)
+			x=1;
+		else if (i===10-j+1)
+			x=1;
+		else
+			x=0;
+		str+=x+',\t'
+	}
+	console.log(str);	
+}
+
+//feccia >
+for (i=1;i<11;i++) {
+	str='';
+	for (j=1;j<11;j++) {
+		if(i===j && i<=5)
+			x=1;
+		else if (i===10-j+1 && i>=6)
+			x=1;
+		else
+			x=0;
+		str+=x+',\t'
+	}
+	console.log(str);	
+}
+
+//freccia giù
+for (i=1;i<11;i++) {
+	str='';
+	for (j=1;j<11;j++) {
+		if(i===j && i<=5)
+			x=1;
+		else if (i===10-j+1 && i<6)
+			x=1;
+		else
+			x=0;
+		str+=x+',\t'
+	}
+	console.log(str);	
+}
+
