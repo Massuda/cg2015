@@ -8,12 +8,10 @@
 var digits_sum = function (){
 	var random = parseInt(Math.random() * (10000 - 1000) + 1000);
 	var n = random.toString();
-	
-	alert(random);
+	console.log(random);
 	while (n.length>1){
-		//alert(n.length+" "+n);
+		var number=0;
 		for(var i=0; i<n.length; i++){
-			var number=0;
 			number = number+parseInt(n.charAt(i));
 		}
 		n = number.toString();
