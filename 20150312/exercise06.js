@@ -1,29 +1,29 @@
+//MusicBox
 (function() {
-// Write your code here  
-  var Album = {
-    nome : nome,
-    artista : artista,
-    play : function(){
-      console.log("Playing "+this.nome+" - "+this.artista);
-    }
-  }
 
-  var MusicBox = {
-    lista: [],
-    favoriteAlbum: function(){
-      return lista[0];
-    },
-    add : function(album){
-      lista.push(album);
-    }
-  }
+function MusicBox(){
+  this.albums = [];
+}
+MusicBox.prototype.addAlbum = function(album){
+  return this.albums.push(album);
+}
+MusicBox.prototype.favoriteAlbum = function(){
+  return this.albums[0];
+}
 
+function Album(artista, titolo){
+  this.artista = artista; 
+  this.titolo = titolo;
+}
+Album.prototype.play = function(){
+  console.log("Playing " + this.artista +" - " + this.titolo);
+}
+ 
 
-
-  var box = MusicBox();
-  var a1 = Album("The Who", "Tommy");
-  var a2 = Album("Tom Waits", "Closing Time");
-  var a3 = Album("John Cale", "Paris 1919");
+  var box = new MusicBox();
+  var a1 = new Album("The Who", "Tommy");
+  var a2 = new Album("Tom Waits", "Closing Time");
+  var a3 = new Album("John Cale", "Paris 1919");
   var favorite;
 
   box.addAlbum(a1);
@@ -37,5 +37,5 @@
   favorite = box.favoriteAlbum(); 
 
   // prints "favorite album is The Who - Tommy"
-  console.log("favorite album is " + favorite); 
+  console.log("favorite album is " + favorite.artista + " - " + favorite.titolo);
 }());
